@@ -16,6 +16,7 @@ import NavigatorSubPage1 from './src/samples/router/NavigatorSubPage1';
 import NavigatorSubPage2 from './src/samples/router/NavigatorSubPage2';
 import NavigatorSubPage3 from './src/samples/router/NavigatorSubPage3';
 import RouterTabs from './src/RouterTabs';
+import JsToNativeInteractPage from './src/samples/jstonative/JsToNativeInteractPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,7 +30,13 @@ function App() {
           component={HomePage}
           options={{title: '首页'}}
         />
+        <Stack.Screen
+          name={RouterTabs.JS_TO_NATIVE_PAGE}
+          component={JsToNativeInteractPage}
+          options={{title: 'JS<=>Native交互'}}></Stack.Screen>
+
         <Stack.Screen name={RouterTabs.RN_DOC_PAGE} component={RnDocPage} />
+
         <Stack.Screen
           name={RouterTabs.NAVIGATOR_SAMPLE_PAGE}
           component={NavigatorSamplePage}

@@ -1,7 +1,6 @@
 import React from 'react';
 import {Button, StyleSheet, View} from 'react-native';
 import RouterTabs from '../RouterTabs';
-import CustomButton from '../samples/component/CustomButton';
 
 export default function HomePage({navigation}): React.JSX.Element {
   return (
@@ -16,6 +15,12 @@ export default function HomePage({navigation}): React.JSX.Element {
         name="Js<->Native交互示例"
         onPress={() => {
           navigation.navigate(RouterTabs.JS_TO_NATIVE_PAGE);
+        }}
+      />
+      <Btn
+        name="RN使用Native原生UI组件"
+        onPress={() => {
+          navigation.navigate(RouterTabs.NAVIGATE_UI_PAGE);
         }}
       />
     </View>
@@ -35,7 +40,7 @@ const stlyes = StyleSheet.create({
     flexDirection: 'column',
   },
   btn: {
-    width: '50%',
+    width: '55%',
     marginTop: 5,
     marginLeft: 5,
   },

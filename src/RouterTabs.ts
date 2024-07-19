@@ -1,12 +1,13 @@
 export default class RouterTabs {
-    public static readonly SCHEME_PRE = "OneTravel://"
+    public static readonly SCHEME_PRE = "OneTravel://";
     public static readonly SPLASH_PAGE = RouterTabs.SCHEME_PRE + "splashpage";
     public static readonly HOME_PAGE = RouterTabs.SCHEME_PRE + "homepage";
-    public static readonly JS_TO_NATIVE_PAGE = RouterTabs.SCHEME_PRE + "jstonativePage"
+    public static readonly JS_TO_NATIVE_PAGE = RouterTabs.SCHEME_PRE + "jstonativePage";
+    public static readonly NAVIGATE_UI_PAGE = RouterTabs.SCHEME_PRE + "nativeuipage";
     public static readonly RN_DOC_PAGE = RouterTabs.HOME_PAGE + "rndocpage";
-    public static readonly NAVIGATOR_SAMPLE_PAGE = RouterTabs.SCHEME_PRE + "navigatorsamplepage"
-    public static readonly NAVIGATOR_SUB_PAGE1 = RouterTabs.SCHEME_PRE + "navigatorsubpage1"
-    public static readonly NAVIGATOR_SUB_PAGE2 = RouterTabs.SCHEME_PRE + "navigatorsubpage2"
-    public static readonly NAVIGATOR_SUB_PAGE3 = RouterTabs.SCHEME_PRE + "navigatorsubpage3"
+    public static readonly NAVIGATOR_SAMPLE_PAGE = RouterTabs.SCHEME_PRE + "navigatorsamplepage";
+    public static readonly NAVIGATOR_SUB_PAGE1 = RouterTabs.SCHEME_PRE + "navigatorsubpage1";
+    public static readonly NAVIGATOR_SUB_PAGE2 = RouterTabs.SCHEME_PRE + "navigatorsubpage2";
+    public static readonly NAVIGATOR_SUB_PAGE3 = RouterTabs.SCHEME_PRE + "navigatorsubpage3";
 
 }

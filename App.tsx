@@ -5,12 +5,9 @@
  * @format
  */
 
-import React, {useState} from 'react';
+import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
-import {Button, Text, View} from 'react-native';
-
-import JsToNativeModule from './src/nativeinterface/JsToNativeModule';
 import RnDocPage from './src/pages/RnDocPage';
 import SplashPage from './src/pages/SplashPage';
 import HomePage from './src/pages/HomePage';
@@ -25,14 +22,14 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName={RouterTabs.HOME_PAGE}>
         {/* <Stack.Screen name="SplashPage" component={SplashPage} /> */}
         <Stack.Screen
-          name="HomePage"
+          name={RouterTabs.HOME_PAGE}
           component={HomePage}
-          options={{statusBarHidden:true}}
+          options={{title: '首页'}}
         />
-        <Stack.Screen name="RnDocPage" component={RnDocPage} />
+        <Stack.Screen name={RouterTabs.RN_DOC_PAGE} component={RnDocPage} />
         <Stack.Screen
           name={RouterTabs.NAVIGATOR_SAMPLE_PAGE}
           component={NavigatorSamplePage}

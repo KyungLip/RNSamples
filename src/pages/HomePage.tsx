@@ -25,6 +25,12 @@ export default function HomePage({navigation}): React.JSX.Element {
           navigation.navigate(RouterTabs.NAVIGATE_UI_PAGE);
         }}
       />
+      <Btn
+        name="点击触摸事件示例"
+        onPress={() => {
+          navigation.navigate(RouterTabs.TOUCH_CLICK_EVENT_PAGE);
+        }}
+      />
       <TouchableOpacity
         style={{
           backgroundColor: '#1E90FF',

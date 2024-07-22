@@ -19,6 +19,7 @@ import RouterTabs from './src/RouterTabs';
 import JsToNativeInteractPage from './src/samples/jstonative/JsToNativeInteractPage';
 import NativeUIPage from './src/samples/jsusenativeview/NativeUIPage';
 import HeaderBarPage from './src/samples/router/HeaderBar';
+import TouchClickEventPage from './src/samples/touchclickevent/TouchClickEventPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -68,6 +69,10 @@ function App() {
         <Stack.Screen
           name={RouterTabs.HEADER_BAR_PAGE}
           component={HeaderBarPage}></Stack.Screen>
+        <Stack.Screen
+          name={RouterTabs.TOUCH_CLICK_EVENT_PAGE}
+          component={TouchClickEventPage}
+          options={{title: 'TouchClickEventPage'}}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );

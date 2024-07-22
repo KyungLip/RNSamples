@@ -10,5 +10,6 @@ export default class RouterTabs {
     public static readonly NAVIGATOR_SUB_PAGE2 = RouterTabs.SCHEME_PRE + "navigatorsubpage2";
     public static readonly NAVIGATOR_SUB_PAGE3 = RouterTabs.SCHEME_PRE + "navigatorsubpage3";
     public static readonly HEADER_BAR_PAGE = RouterTabs.SCHEME_PRE + "hreaderbarpage";
+    public static readonly TOUCH_CLICK_EVENT_PAGE = RouterTabs.SCHEME_PRE + "touchclickeventpage"
 
 }

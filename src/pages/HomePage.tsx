@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, StyleSheet, View} from 'react-native';
+import {Button, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import RouterTabs from '../RouterTabs';
 
 export default function HomePage({navigation}): React.JSX.Element {
@@ -8,7 +8,9 @@ export default function HomePage({navigation}): React.JSX.Element {
       <Btn
         name="导航示例"
         onPress={() => {
-          navigation.navigate(RouterTabs.NAVIGATOR_SAMPLE_PAGE);
+          navigation.navigate(RouterTabs.NAVIGATOR_SAMPLE_PAGE, {
+            to: 'NavigatorSamplePage',
+          });
         }}
       />
       <Btn
@@ -23,6 +25,15 @@ export default function HomePage({navigation}): React.JSX.Element {
           navigation.navigate(RouterTabs.NAVIGATE_UI_PAGE);
         }}
       />
+      <TouchableOpacity
+        style={{
+          backgroundColor: '#1E90FF',
+          width: '30%',
+          height: 30,
+          borderRadius: 2,
+        }}>
+        <Text style={{alignSelf: 'center', color: '#FFFFFF'}}>Hello</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -41,7 +52,7 @@ const stlyes = StyleSheet.create({
   },
   btn: {
     width: '55%',
-    marginTop: 5,
-    marginLeft: 5,
+    marginTop: 10,
+    marginLeft: 10,
   },
 });

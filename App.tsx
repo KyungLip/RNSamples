@@ -18,6 +18,7 @@ import NavigatorSubPage3 from './src/samples/router/NavigatorSubPage3';
 import RouterTabs from './src/RouterTabs';
 import JsToNativeInteractPage from './src/samples/jstonative/JsToNativeInteractPage';
 import NativeUIPage from './src/samples/jsusenativeview/NativeUIPage';
+import HeaderBarPage from './src/samples/router/HeaderBar';
 
 const Stack = createNativeStackNavigator();
 
@@ -46,19 +47,27 @@ function App() {
         <Stack.Screen
           name={RouterTabs.NAVIGATOR_SAMPLE_PAGE}
           component={NavigatorSamplePage}
+          options={{title: 'NavigatorSamplePage'}}
+          initialParams={{from: 'HomePage'}}
         />
         <Stack.Screen
           name={RouterTabs.NAVIGATOR_SUB_PAGE1}
           component={NavigatorSubPage1}
+          options={{title: 'NavigatorSubPage1'}}
         />
         <Stack.Screen
           name={RouterTabs.NAVIGATOR_SUB_PAGE2}
           component={NavigatorSubPage2}
+          options={{title: 'NavigatorSubPage2'}}
         />
         <Stack.Screen
           name={RouterTabs.NAVIGATOR_SUB_PAGE3}
           component={NavigatorSubPage3}
+          options={{title: 'NavigatorSubPage3'}}
         />
+        <Stack.Screen
+          name={RouterTabs.HEADER_BAR_PAGE}
+          component={HeaderBarPage}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );

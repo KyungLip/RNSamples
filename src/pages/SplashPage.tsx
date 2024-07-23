@@ -1,7 +1,6 @@
-
 import {useEffect, useRef, useState} from 'react';
-import {Button, Text, View} from 'react-native';
-
+import {Button, Image, Text, View} from 'react-native';
+import RouterTabs from '../RouterTabs';
 
 export default function SplashPage({navigation}) {
   const [count, setCount] = useState(5);
@@ -12,7 +11,7 @@ export default function SplashPage({navigation}) {
       console.log('kylp:count=' + count + ',num=' + num.current);
       if (num.current == 0) {
         clearInterval(intervalId);
-        navigation.replace('HomePage');
+        // navigation.replace(RouterTabs.HOME_PAGE);
       } else {
         setCount(num.current);
       }
@@ -21,6 +20,13 @@ export default function SplashPage({navigation}) {
       clearInterval(intervalId);
     };
   }, []);
-  let msg = num.current == 1 ? '倒计时结束' : '倒计时'+count + 'S';
-  return <View>{<Text style={{fontSize: 20}}>{msg}</Text>}</View>;
+  let msg = num.current == 1 ? '倒计时结束' : '倒计时' + count + 'S';
+  return (
+    <View>
+      <Image
+        source={{uri: 'https://reactnative.dev/docs/assets/p_cat1.png'}}
+        style={{width: 200, height: 200}}></Image>
+      <Text style={{fontSize: 20}}>{msg}</Text>
+    </View>
+  );
 }

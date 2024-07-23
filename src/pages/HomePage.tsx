@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import RouterTabs from '../RouterTabs';
+import {ButtonX} from '../samples/component/CustomButton';
 
 export default function HomePage({navigation}): React.JSX.Element {
   return (
@@ -14,13 +15,13 @@ export default function HomePage({navigation}): React.JSX.Element {
         }}
       />
       <Btn
-        name="Js<->Native交互示例"
+        name="RN与Native交互示例"
         onPress={() => {
           navigation.navigate(RouterTabs.JS_TO_NATIVE_PAGE);
         }}
       />
       <Btn
-        name="RN使用Native原生UI组件"
+        name="使用N原生UI组件"
         onPress={() => {
           navigation.navigate(RouterTabs.NAVIGATE_UI_PAGE);
         }}
@@ -31,15 +32,34 @@ export default function HomePage({navigation}): React.JSX.Element {
           navigation.navigate(RouterTabs.TOUCH_CLICK_EVENT_PAGE);
         }}
       />
-      <TouchableOpacity
-        style={{
-          backgroundColor: '#1E90FF',
-          width: '30%',
-          height: 30,
-          borderRadius: 2,
-        }}>
-        <Text style={{alignSelf: 'center', color: '#FFFFFF'}}>Hello</Text>
-      </TouchableOpacity>
+      <ButtonX
+        title="TextInput示例"
+        style={stlyes.btnx}
+        onPress={() => {
+          navigation.navigate(RouterTabs.TEXTINPUT_PAGE);
+        }}
+      />
+      <ButtonX
+        title="ScrollView示例"
+        style={stlyes.btnx}
+        onPress={() => {
+          navigation.navigate(RouterTabs.SCROLL_VIEW_PAGE);
+        }}
+      />
+      <ButtonX
+        title="FlatList示例"
+        style={stlyes.btnx}
+        onPress={() => {
+          navigation.navigate(RouterTabs.FLAT_LIST_PAGE);
+        }}
+      />
+      <ButtonX
+        title="SectionList示例"
+        style={stlyes.btnx}
+        onPress={() => {
+          navigation.navigate(RouterTabs.SECTION_LIST_PAGE);
+        }}
+      />
     </View>
   );
 }
@@ -60,5 +80,14 @@ const stlyes = StyleSheet.create({
     width: '55%',
     marginTop: 10,
     marginLeft: 10,
+  },
+  btnx: {
+    backgroundColor: '#1E90FF',
+    width: '55%',
+    height: 30,
+    borderRadius: 2,
+    marginTop: 10,
+    marginLeft: 10,
+    justifyContent: 'center',
   },
 });

@@ -33,31 +33,17 @@ export default function HomePage({navigation}): React.JSX.Element {
         }}
       />
       <ButtonX
-        title="TextInput示例"
+        title="Api示例"
         style={stlyes.btnx}
         onPress={() => {
-          navigation.navigate(RouterTabs.TEXTINPUT_PAGE);
+          navigation.navigate(RouterTabs.API_SAMPLE_PAGE);
         }}
       />
       <ButtonX
-        title="ScrollView示例"
+        title="UI组件示例"
         style={stlyes.btnx}
         onPress={() => {
-          navigation.navigate(RouterTabs.SCROLL_VIEW_PAGE);
-        }}
-      />
-      <ButtonX
-        title="FlatList示例"
-        style={stlyes.btnx}
-        onPress={() => {
-          navigation.navigate(RouterTabs.FLAT_LIST_PAGE);
-        }}
-      />
-      <ButtonX
-        title="SectionList示例"
-        style={stlyes.btnx}
-        onPress={() => {
-          navigation.navigate(RouterTabs.SECTION_LIST_PAGE);
+          navigation.navigate(RouterTabs.UI_COMPONENT_PAGE);
         }}
       />
     </View>

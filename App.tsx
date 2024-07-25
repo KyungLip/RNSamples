@@ -24,13 +24,16 @@ import TextInputSample from './src/samples/uicomponents/TextInputSample';
 import ScrollViewSamplePage from './src/samples/uicomponents/ScrollViewSamplePage';
 import FlatListPage from './src/samples/uicomponents/FlatListPage';
 import SectionListPage from './src/samples/uicomponents/SectionListPage';
+import ApiSamplePage from './src/samples/api/ApiSamplePage';
+import UIComponentPage from './src/samples/uicomponents/UIComponentPage';
+import ImagePage from './src/samples/uicomponents/ImagePage';
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={RouterTabs.HOME_PAGE}>
+      <Stack.Navigator initialRouteName={RouterTabs.HOME_PAGE} screenOptions={{animation:"slide_from_right"}}>
         <Stack.Screen name="SplashPage" component={SplashPage} />
         <Stack.Screen
           name={RouterTabs.HOME_PAGE}
@@ -42,13 +45,11 @@ function App() {
           component={JsToNativeInteractPage}
           options={{title: 'JS<=>Native交互'}}
         />
-
         <Stack.Screen
           name={RouterTabs.NAVIGATE_UI_PAGE}
           component={NativeUIPage}
         />
         <Stack.Screen name={RouterTabs.RN_DOC_PAGE} component={RnDocPage} />
-
         <Stack.Screen
           name={RouterTabs.NAVIGATOR_SAMPLE_PAGE}
           component={NavigatorSamplePage}
@@ -98,6 +99,22 @@ function App() {
           name={RouterTabs.SECTION_LIST_PAGE}
           component={SectionListPage}
           options={{title: 'SectionListPage'}}
+        />
+        <Stack.Screen
+          name={RouterTabs.API_SAMPLE_PAGE}
+          component={ApiSamplePage}
+          options={{title: 'ApiSamplePage'}}
+        />
+        <Stack.Screen
+          name={RouterTabs.UI_COMPONENT_PAGE}
+          component={UIComponentPage}
+          options={{title: 'UIConponentPage'}}
+        />
+
+        <Stack.Screen
+          name={RouterTabs.IMAGE_PAGE}
+          component={ImagePage}
+          options={{title: 'ImagePage'}}
         />
       </Stack.Navigator>
     </NavigationContainer>

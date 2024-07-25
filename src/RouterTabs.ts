@@ -15,5 +15,7 @@ export default class RouterTabs {
     public static readonly SCROLL_VIEW_PAGE = RouterTabs.SCHEME_PRE + "scrollviewpage";
     public static readonly FLAT_LIST_PAGE = RouterTabs.SCHEME_PRE + "flatlistpage";
     public static readonly SECTION_LIST_PAGE = RouterTabs.SCHEME_PRE + "sectionlistpage";
-
+    public static readonly API_SAMPLE_PAGE = RouterTabs.SCHEME_PRE + "apisamplepage";
+    public static readonly UI_COMPONENT_PAGE = RouterTabs.SCHEME_PRE + "uicomponent";
+    public static readonly IMAGE_PAGE=RouterTabs.SCHEME_PRE+"imagepage";
 }

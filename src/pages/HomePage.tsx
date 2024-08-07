@@ -2,6 +2,8 @@ import React from 'react';
 import {Button, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import RouterTabs from '../RouterTabs';
 import {ButtonX} from '../samples/component/CustomButton';
+import {useDispatch, useSelector} from 'react-redux';
+import {decrement, increment} from '../store/CounterSlice';
 
 export default function HomePage({navigation}): React.JSX.Element {
   return (
@@ -21,7 +23,7 @@ export default function HomePage({navigation}): React.JSX.Element {
         }}
       />
       <Btn
-        name="使用N原生UI组件"
+        name="使用原生UI组件"
         onPress={() => {
           navigation.navigate(RouterTabs.NAVIGATE_UI_PAGE);
         }}
@@ -44,6 +46,20 @@ export default function HomePage({navigation}): React.JSX.Element {
         style={stlyes.btnx}
         onPress={() => {
           navigation.navigate(RouterTabs.UI_COMPONENT_PAGE);
+        }}
+      />
+      <ButtonX
+        title="动画示例"
+        style={stlyes.btnx}
+        onPress={() => {
+          navigation.navigate(RouterTabs.ANIM_PAGE);
+        }}
+      />
+      <ButtonX
+        title="Redux示例"
+        style={stlyes.btnx}
+        onPress={() => {
+          navigation.navigate(RouterTabs.REDUX_SAMPLE_PAGE);
         }}
       />
     </View>

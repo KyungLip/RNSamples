@@ -17,5 +17,12 @@ export default class RouterTabs {
     public static readonly SECTION_LIST_PAGE = RouterTabs.SCHEME_PRE + "sectionlistpage";
     public static readonly API_SAMPLE_PAGE = RouterTabs.SCHEME_PRE + "apisamplepage";
     public static readonly UI_COMPONENT_PAGE = RouterTabs.SCHEME_PRE + "uicomponent";
-    public static readonly IMAGE_PAGE=RouterTabs.SCHEME_PRE+"imagepage";
+    public static readonly IMAGE_PAGE = RouterTabs.SCHEME_PRE + "imagepage";
+    public static readonly ANIM_PAGE = RouterTabs.SCHEME_PRE + "animsamplepage";
+    public static readonly ANIMATED_PAGE = RouterTabs.SCHEME_PRE + "animatedpage";
+    public static readonly LAYOUT_ANIMATION_PAGE = RouterTabs.SCHEME_PRE + "laoutanimationpage";
+    public static readonly REDUX_SAMPLE_PAGE = RouterTabs.SCHEME_PRE + "reduxsamplepage";
+    public static readonly REDUX_BASE_PAGE = RouterTabs.SCHEME_PRE + "reduxsbasepage";
+    public static readonly REDUX_TOOLKIT_PAGE = RouterTabs.SCHEME_PRE + "reduxtoolkitpage"
+
 }

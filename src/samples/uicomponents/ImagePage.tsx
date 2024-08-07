@@ -6,6 +6,7 @@ export default function ImagePage() {
   const [count, setCount] = useState(1);
   const arr = [1, 2, 3, 4, 5, 6, 7];
   const ret = arr.reduce((pre, cur) => pre + cur, 0);
+  
   return (
     <View>
       <View style={{flexDirection: 'row', alignItems: 'center'}}>
